@@ -1,0 +1,41 @@
+{
+  "name": "@donugr/solidity-library",
+  "version": "1.0.0",
+  "description": "solidity-library",
+  "files": [
+    "/library/**/*.sol",
+    "/library/*.sol"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donugr/solidity-library.git"
+  },
+  "keywords": [
+    "solidity",
+    "string-utils",
+    "datetime",
+    "safemath",
+    "safemathupgradeable",
+    "datetime",
+    "library",
+    "ethereum",
+    "donugr",
+    "donugr-tech"
+  ],
+  "author": "donugr-tech <dev@donugr.tech>",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/donugr/solidity-library/issues"
+  },
+  "homepage": "https://github.com/donugr/solidity-library",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.5"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/donugr"
+  }
+}
