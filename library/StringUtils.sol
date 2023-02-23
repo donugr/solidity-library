@@ -43,9 +43,9 @@ library StringUtils {
     uint _ptr;
   }
 
-  function memcpy(uint dest, uint src, uint len) private pure {
+  function memcpy(uint dest, uint src, uint lendata) private pure {
     // Copy word-length chunks while possible
-    for (; len >= 32; len -= 32) {
+    for (; lendata >= 32; lendata -= 32) {
       assembly {
         mstore(dest, mload(src))
       }
@@ -55,8 +55,8 @@ library StringUtils {
 
     // Copy remaining bytes
     uint mask = type(uint).max;
-    if (len > 0) {
-      mask = 256 ** (32 - len) - 1;
+    if (lendata > 0) {
+      mask = 256 ** (32 - lendata) - 1;
     }
     assembly {
       let srcpart := and(mload(src), not(mask))
